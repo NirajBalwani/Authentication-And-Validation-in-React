@@ -1,9 +1,8 @@
 import React from "react";
-import Registeratin from "./Registeratin";
-
+import Registration from "./Registration";
 
 const App = () => {
-  return <Registeratin/>;
+  return <Registration/>;
 };
 
 export default App

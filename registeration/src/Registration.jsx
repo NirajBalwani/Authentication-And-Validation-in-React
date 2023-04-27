@@ -12,20 +12,19 @@ const initialValues = {
     confirm_password: "",
 }
 
-const Registeratin = () => {
+const Registration = () => {
 
     const { values, errors, handleBlur, handleChange, handleSubmit } = useFormik({
         initialValues: initialValues,
-        validationSchema:signUpSchema,
+        validationSchema: signUpSchema,
         onSubmit: (values) => {
             console.log(values);
         }
     })
-    
+
     return (
 
         <Wrapper>
-
             <div className="container">
                 <form onSubmit={handleSubmit}>
                     <h2>Registration</h2>
@@ -45,21 +44,25 @@ const Registeratin = () => {
                         <div className="input-box">
                             <label htmlFor="email">Enter Your email :- </label>
                             <input type="email" name="email" placeholder="Enter Your email" value={values.email} onChange={handleChange} onBlur={handleBlur} required />
+                            {<p className="form-error">{errors.email}</p>}
                         </div>
 
                         <div className="input-box">
                             <label htmlFor="phone_number">Enter Your Mobile Number :- </label>
                             <input type="tel" name="phone_number" placeholder="Enter Your Mobile Number" value={values.phone_number} onChange={handleChange} onBlur={handleBlur} required />
+                            {<p className="form-error">{errors.phone_number}</p>}
                         </div>
 
                         <div className="input-box">
                             <label htmlFor="password">Enter Your Password :- </label>
                             <input type="password" name="password" placeholder="Enter Your Password" value={values.password} onChange={handleChange} onBlur={handleBlur} required />
+                            {<p className="form-error">{errors.password}</p>}
                         </div>
 
                         <div className="input-box">
                             <label htmlFor="confirm_password">Enter Confirm Password :- </label>
                             <input type="password" name="confirm_password" placeholder="Enter Your Confirm Password" value={values.confirm_password} onChange={handleChange} onBlur={handleBlur} required />
+                            {<p className="form-error">{errors.confirm_password}</p>}
                         </div>
 
                         <span className="gender-title">Gender</span>
@@ -74,27 +77,20 @@ const Registeratin = () => {
 
                     </div>
                     <div className="alert">
-                        <p>By clicking sign up, you agree to our <a href="#">terms and conditions,</a> <a href="#">privacy and policy's</a> and <a href="#">cookies policy.</a>  you may receive SMS or mails
+                        <p>By clicking sign up, you agree to our <a href="https://google.com">terms and conditions,</a> <a href="https://google.com">privacy and policy's</a> and <a href="https://google.com">cookies policy.</a>  you may receive SMS or mails
                             notifications from us and can opt out at any time...
                         </p>
                     </div>
                     <div className="button-container">
-                        <button type="submit"> Register </button>
+                        <button type="submit">Register</button>
                     </div>
                 </form>
-
             </div>
-
-
-
         </Wrapper>
-
-
     )
 }
 
 const Wrapper = styled.section`
-
 *{
     margin: 0px;
     padding: 0px;
@@ -228,7 +224,5 @@ h2{
         width: 60%;
     }
 }
-
 `
-
-export default Registeratin
+export default Registration

@@ -1,6 +1,5 @@
 import * as Yup from "yup";
 
-
 export const signUpSchema = Yup.object({
     firstname: Yup.string().min(2).max(25).required("Please enter first name"),
     lastname: Yup.string().min(2).max(25).required("Please enter last name"),

@@ -14,15 +14,15 @@ This is a simple registration project built using the MERN stack. It utilizes Fo
 
 ```git clone https://github.com/MohammedRizwan4/Authentication-And-Validation-in-React.git```
 
-1. Change directory into the project folder:
+2. Change directory into the project folder:
 
 ```cd registeration```
 
-1. Install dependencies:
+3. Install dependencies:
 
 ```npm install```
 
-1. Start the application
+4. Start the application
 
 ```npm start```
 
